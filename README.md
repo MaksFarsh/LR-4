@@ -9,7 +9,21 @@
    * В языке C это реализуется через оператор исключающего ИЛИ (XOR) или логическое неравенство: `result = ((A % 2 == 0) ^ (B % 2 == 0));`
 4. Вывести результат (1 — победа, 0 — поражение).
 5. Конец
-
+### Блок-схема
+```mermaid
+graph TD
+    Start((Начало)) --> InputA[/Ввод A/]
+    InputA --> InputB[/Ввод B/]
+    InputB --> Condition{A%2 != B%2?}
+    
+    Condition -- Да --> SetResult1[result = 1]
+    Condition -- Нет --> SetResult0[result = 0]
+    
+    SetResult1 --> Output[/Вывод result/]
+    SetResult0 --> Output
+    
+    Output --> End((Конец))
+```
 ## 2. Реализация программы
 
 ```c
