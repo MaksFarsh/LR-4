@@ -14,7 +14,7 @@
 graph TD
     Start((Начало)) --> InputA[/Ввод A/]
     InputA --> InputB[/Ввод B/]
-    InputB --> Condition{A%2 ==0 || B%2 == 0?}
+    InputB --> Condition{A%2 != B%2?}
     
     Condition -- Да --> SetResult1[result = 1]
     Condition -- Нет --> SetResult0[result = 0]
